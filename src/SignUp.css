@@ -1,53 +1,54 @@
-/* Reset default styles */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Page background and font */
+/* Body Styling */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f2f4f7;
+  background: linear-gradient(135deg, #e0eafc, #cfdef3);
   color: #333;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* ✅ Prevent vertical shaking */
 }
 
-/* Main container */
+/* Container */
 .signup-container {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 450px;
+  background-color: #ffffff;
+  padding: 2rem 2.5rem; /* ✅ Reduced vertical padding */
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  width: 100%;
+  max-width: 480px;
 }
 
 /* Title */
 .signup-title {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #007bff;
+  margin-bottom: 1.2rem;
+  color: #0066cc;
 }
 
 /* Form */
 .signup-form .form-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 .signup-form label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   font-weight: 600;
 }
 
 .signup-form input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 0.9rem;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
@@ -59,11 +60,11 @@ body {
   outline: none;
 }
 
-/* Submit Button */
+/* Button */
 .submit-btn {
   width: 100%;
   padding: 0.75rem;
-  background-color: #007bff;
+  background-color: #0066cc;
   color: white;
   font-size: 1rem;
   border: none;
@@ -74,50 +75,30 @@ body {
 }
 
 .submit-btn:hover {
-  background-color: #0056b3;
+  background-color: #004999;
 }
 
-/* Responsive Adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
+  body {
+    overflow: auto; /* ✅ Allow scroll on small screens */
+  }
+
   .signup-container {
     padding: 1.5rem;
   }
 
   .signup-title {
-    font-size: 1.75rem;
-  }
-
-  .signup-form input {
-    font-size: 0.95rem;
-    padding: 0.65rem 0.9rem;
+    font-size: 1.6rem;
   }
 
   .submit-btn {
-    padding: 0.65rem;
     font-size: 0.95rem;
+    padding: 0.65rem;
   }
 }
-
-@media (max-width: 480px) {
-  .signup-container {
-    padding: 1rem;
-    border-radius: 8px;
-  }
-
-  .signup-title {
-    font-size: 1.5rem;
-  }
-
-  .signup-form label {
-    font-size: 0.95rem;
-  }
-
-  .signup-form input {
-    font-size: 0.9rem;
-  }
-
-  .submit-btn {
-    font-size: 0.9rem;
-    padding: 0.6rem;
-  }
+.error-msg {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.3rem;
 }
